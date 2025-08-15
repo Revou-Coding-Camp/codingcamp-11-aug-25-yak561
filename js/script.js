@@ -1,13 +1,13 @@
-// Cek apakah nama pengguna sudah ada di sessionStorage
+// Nama pengguna sudah ada di sessionStorage
 var storedName = sessionStorage.getItem('userName');
 var isHomePage = window.location.pathname.endsWith('home.html');
 
-// Jika nama belum ada dan berada di halaman utama (index.html), tampilkan popup.
+// Nama belum ada dan berada di halaman utama (index.html), tampilkan popup.
 if (!storedName && !isHomePage) {
   document.getElementById('nameDialog').showModal();
 }
 
-// Fungsi sambutan yang diperbarui
+// Fungsi sambutan 
 function greet(form) {
     var name = (form.name.value || '').trim();
     if (!name) {
@@ -43,8 +43,6 @@ if (isHomePage) {
     }
 }
 
-// Tambahkan kode ini ke file script.js Anda
-
 // Fungsi ini akan dipanggil saat form disubmit
 function handleFormSubmit() {
     // Mengambil elemen formulir
@@ -75,4 +73,5 @@ function handleFormSubmit() {
 
     // Mencegah halaman dari refresh (penting!)
     return false;
+
 }
