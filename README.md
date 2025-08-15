@@ -17,5 +17,6 @@ Website ini dibuat menggunakan teknologi berikut :
 - JavaScript
 
 ## Cara Penggunaan ##
-1. Klik link berikut ""
+1. Klik link berikut "https://revou-coding-camp.github.io/codingcamp-11-aug-25-yak561/"
+
 2. Jika ingin mencoba kirim pesan  klik tombol "Massage Us" lalu mengisinya
