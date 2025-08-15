@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <dialog id="nameDialog">
+        <form method="dialog" class="modal" onsubmit="return greet(this)">
+            <h2>Masukkan Nama</h2>
+            <div class="row">
+                <label for="name">Nama kamu</label>
+                <input id="name" name="name" type="text" placeholder="Masukkan Nama Anda" autocomplete="name" />
+            </div>
+            <div class="actions">
+                <button class="btn ghost" type="button" onclick="document.getElementById('nameDialog').close()">Batal</button>
+                <button class="btn primary" type="submit">Simpan</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5efeb;
+    color: #2f4156;
+}
+
+.content {
+    flex: 1;
+}
+
+.card {
+    margin: 40px 60px;
+    padding: 20px;
+}
+
+dialog {
+    border: none;
+    padding: 0;
+    border-radius: 1rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,.15);
+    width: min(420px, 92vw);
+    }
+
+dialog::backdrop { 
+    background: rgba(0,0,0,.35); 
+}
+
+.modal {
+    padding: 1.25rem 1.25rem 1rem;
+    }
+
+.modal h2 { 
+    margin: 0 0 .75rem; 
+    font-size: 1.25rem; 
+}
+
+.row { 
+    display: grid; 
+    gap: .5rem; 
+    margin-bottom: 1rem; 
+}
+
+label { 
+    font-size: .9rem; 
+    opacity: .85; 
+}
+
+input[type="text"] {
+    padding: .75rem .9rem;
+    border: 1px solid #e5e7eb;
+    border-radius: .75rem;
+    font-size: 1rem;
+    outline: none;
+    color: #f5efeb;
+}
+
+input[type="text"]:focus { 
+    border-color: #c8d9e6;
+    box-shadow: 0 0 0 4px #567c8d; 
+} 
+
+.actions { 
+    display: flex; 
+    gap: .5rem; 
+    justify-content: flex-end; 
+} 
+
+.btn {
+    appearance: none; border: none; cursor: pointer; font-weight: 600; border-radius: .8rem;
+    padding: .7rem 1rem; font-size: .95rem;
+}
+
+.btn.primary { 
+    background: #567c8d;
+    color:#f5efeb;
+} 
+
+.btn.ghost { 
+    background: #f5efeb;
+    color: #567c8d;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    left: auto;
+}
+
+/* Aturan dasar untuk semua ukuran layar */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #2f4156;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Media Query untuk layar kecil (di bawah 768px) */
+@media screen and (max-width: 768px) {
+    .header {
+    flex-direction: column; /* Mengubah tata letak menjadi vertikal */
+    align-items: center; /* Meratakan item ke tengah */
+    padding: 10px; /* Tambah padding */
+    }
+
+    .header .logo {
+    margin-bottom: 15px; /* Beri jarak antara logo dan navigasi */
+    }
+
+    nav {
+    display: flex;
+    flex-direction: column; /* Ubah link menjadi tumpukan vertikal */
+    width: 100%; /* Lebar navigasi 100% dari parent */
+    gap: 10px; /* Jarak antar link */
+    text-align: center; /* Teks rata tengah */
+    }
+
+    nav a {
+    padding: 12px 0; /* Padding vertikal yang lebih besar */
+    }
+}
+
+nav a:hover {
+    background-color: #c8d9e6;
+    color: #2f4156;
+}
+
+h2 {
+    margin-left: 55px;
+}
+
+.office {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* agar rapi di layar kecil */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+.office-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.office-item:hover {
+    transform: translateY(-8px); /* efek naik saat hover */
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #2f4156;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.office-item:hover .foto {
+    transform: scale(1.08); /* sedikit membesar saat hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.office-item label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #2f4156;
+}
+
+.discussion-image {
+    width: 400px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.discussion {
+    justify-self: anchor-center;
+}
+
+.about {
+    margin: 20px 60px;
+    font-size: 1rem;
+}
+
+.visimisi {
+    margin: 20px 60px;
+    font-size: 1rem;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+
+h4 {
+    text-align: center;
+}
+
+.identity {
+    place-self: center;
+    font-size: larger;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+select {
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #2f4156;
+    border-radius: .75rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: #2f4156;
+    color: #f5efeb;
+}
+
+.message-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    padding: 2rem;
+    margin-top: 20px;
+}
+
+.form-section {
+    width: 400px;
+}
+
+.form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #c8d9e6;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #567c8d;
+    color: #2f4156;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #2f4156;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2f4156;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c8d9e6;
+    color: #2f4156;
+}
+
+.output-section {
+    width: 400px;
+}
+
+.output-card {
+    border: 1px solid #567c8d;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #2f4156;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.output-card p {
+    margin: 0.5rem 0;
+    line-height: 1.2;
+}
+
+.output-card hr {
+    margin: 1rem 0;
+    background-color: #567c8d;
+}
+
+#current-time {
+    font-weight: bold;
+}
+
+#output-content {
+    white-space: pre-line;
+}
+
+/* Responsiveness untuk layar kecil */
+@media (max-width: 768px) {
+    .message-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-section, .output-section {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    font-size: 0.8rem;
+    background: #f5efeb;
+    padding: 10px 0;
+    margin-top: 0;
+}
